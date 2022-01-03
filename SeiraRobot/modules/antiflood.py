@@ -398,22 +398,22 @@ def __chat_settings__(chat_id, user_id):
     return "Antiflood has been set to`{}`.".format(limit)
 
 __help__ = """
-──「 Anti-Flood 」──
+──「 Chống lũ lụt 」──
 
-Antiflood allows you to take action on users that send more than x messages in a row. Exceeding the set flood \
-will result in restricting that user.
-This will mute users if they send more than 10 messages in a row, bots are ignored.
-❂ `/flood`*:* Get the current flood control setting
+Antiflood cho phép bạn thực hiện hành động đối với những người dùng gửi hơn x tin nhắn liên tiếp. Vượt lũ đã định \
+sẽ dẫn đến việc hạn chế người dùng đó.
+Điều này sẽ tắt tiếng người dùng nếu họ gửi hơn 10 tin nhắn liên tiếp, bot sẽ bị bỏ qua.
+❂ `/flood`*:*Nhận cài đặt kiểm soát lũ lụt hiện tại
 
-*Admins only:*
+*Chỉ dành cho quản trị viên:*
 
-❂ `/setflood <int/'no'/'off'>`*:* enables or disables flood control
+❂ `/setflood <int/'no'/'off'>`*:* bật hoặc tắt kiểm soát lũ lụt
  *Example:* `/setflood 10`
-❂ `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* Action to perform when user have exceeded flood limit. ban/kick/mute/tmute/tban
+❂ `/setfloodmode <ban/kick/mute/tban/tmute> <value>`*:* Hành động cần thực hiện khi người dùng đã vượt quá giới hạn lũ. ban/kick/mute/tmute/tban
 
-*Note:*
-Value must be filled for tban and tmute!!
-It can be:
+*Ghi chú:*
+Giá trị phải được điền cho tban và tmute !!
+Nó có thể:
 ⇝ `5m` = 5 minutes
 ⇝ `6h` = 6 hours
 ⇝ `3d` = 3 days

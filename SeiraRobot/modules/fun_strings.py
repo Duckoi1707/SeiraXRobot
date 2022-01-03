@@ -437,7 +437,7 @@ EIGHTBALL = [
     "🟢 You may rely on it.",
 ]
 
-DECIDE = ("Yes.", "No.", "Maybe.")
+DECIDE = ("Đúng Vậy.", "Đéo Phải.", "Có Lẽ Nhưng Mà Là Có.")
 
 TABLE = (
     "(╯°□°）╯彡 ┻━┻",

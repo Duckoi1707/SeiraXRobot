@@ -43,15 +43,15 @@ def eliminate_channel(update: Update, context: CallbackContext):
 __help__ = """
 ──「 Anti-Channels 」──
 
-    ⚠️ WARNING ⚠️
+    ⚠️ Cảm Báp ⚠️
 
-*IF YOU USE THIS MODE, THE RESULT IS IN THE GROUP FOREVER YOU CAN'T CHAT USING THE CHANNEL*
+*NẾU BẠN SỬ DỤNG CHẾ ĐỘ NÀY, KẾT QUẢ CÓ TRONG NHÓM MÃI MÃI LÀ BẠN KHÔNG THỂ TRÒ CHUYỆN ĐƯỢC KHI SỬ DỤNG KÊNH*
 
-Anti Channel Mode is a mode to automatically ban users who chat using Channels. 
-This command can only be used by *Admins*.
+Chế độ chống kênh là chế độ tự động cấm người dùng trò chuyện bằng Kênh.
+Lệnh này chỉ có thể được sử dụng bởi *Admins*.
 
-❂ /antichannelmode <'on'/'yes'> *:* enables anti-channel-mode
-❂ /antichannelmode <'off'/'no'> *:* disabled anti-channel-mode
+❂ /antichannelmode <'on'/'yes'> *:* bật chế độ chống kênh
+❂ /antichannelmode <'off'/'no'> *:* tắt chế độ chống kênh
 """
 
-__mod_name__ = "Anti-Channel"
+__mod_name__ = "Chống Kênh"

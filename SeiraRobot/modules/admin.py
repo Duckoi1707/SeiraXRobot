@@ -33,25 +33,25 @@ def set_sticker(update: Update, context: CallbackContext):
     user = update.effective_user
 
     if user_can_changeinfo(chat, user, context.bot.id) is False:
-        return msg.reply_text("You're missing rights to change chat info!")
+        return msg.reply_text("Bạn thiếu quyền thay đổi thông tin trò chuyện!")
 
     if msg.reply_to_message:
         if not msg.reply_to_message.sticker:
             return msg.reply_text(
-                "You need to reply to some sticker to set chat sticker set!"
+                "Bạn cần trả lời một số hình dán để đặt bộ hình dán trò chuyện!"
             )
         stkr = msg.reply_to_message.sticker.set_name
         try:
             context.bot.set_chat_sticker_set(chat.id, stkr)
-            msg.reply_text(f"Successfully set new group stickers in {chat.title}!")
+            msg.reply_text(f"Đặt thành công hình dán nhóm mới trong {chat.title}!")
         except BadRequest as excp:
             if excp.message == "Participants_too_few":
                 return msg.reply_text(
-                    "Sorry, due to telegram restrictions chat needs to have minimum 100 members before they can have group stickers!"
+                    "Xin lỗi, do hạn chế về điện tín, cuộc trò chuyện cần có tối thiểu 100 thành viên trước khi họ có thể có nhãn dán nhóm!"
                 )
             msg.reply_text(f"Error! {excp.message}.")
     else:
-        msg.reply_text("You need to reply to some sticker to set chat sticker set!")
+        msg.reply_text("Bạn cần trả lời một số hình dán để đặt bộ hình dán trò chuyện!")
        
     
 @bot_admin
@@ -920,30 +920,30 @@ def button(update: Update, context: CallbackContext) -> str:
   
 __help__ = """
 *User Commands*:
-❂ /admins*:* list of admins in the chat
-❂ /pinned*:* to get the current pinned message.
+❂ /admins*:* danh sách quản trị viên trong cuộc trò chuyện
+❂ /pinned*:* để nhận được tin nhắn được ghim hiện tại.
 
-*The Following Commands are Admins only:* 
-❂ /pin*:* silently pins the message replied to - add `'loud'` or `'notify'` to give notifs to users
-❂ /unpin*:* unpins the currently pinned message
-❂ /invitelink*:* gets invitelink
-❂ /promote*:* promotes the user replied to
-❂ /fullpromote*:* promotes the user replied to with full rights
-❂ /demote*:* demotes the user replied to
-❂ /title <title here>*:* sets a custom title for an admin that the bot promoted
-❂ /admincache*:* force refresh the admins list
-❂ /del*:* deletes the message you replied to
-❂ /purge*:* deletes all messages between this and the replied to message.
-❂ /purge <integer X>*:* deletes the replied message, and X messages following it if replied to a message.
-❂ /setgtitle <text>*:* set group title
-❂ /setgpic*:* reply to an image to set as group photo
-❂ /setdesc*:* Set group description
-❂ /setsticker*:* Set group sticker
+*Các lệnh sau chỉ dành cho quản trị viên:* 
+❂ /pin*:* âm thầm ghim tin nhắn đã trả lời - add `'loud'` or `'notify'` để cung cấp thông tin cho người dùng
+❂ /unpin*:* bỏ ghim tin nhắn hiện được ghim
+❂ /invitelink*:* lấy liên kết mời
+❂ /promote*:* quảng cáo người dùng đã trả lời
+❂ /fullpromote*:* quảng cáo mà người dùng đã trả lời với đầy đủ quyền
+❂ /demote*:* giảm hạng người dùng đã trả lời
+❂ /title <title here>*:* đặt tiêu đề tùy chỉnh cho một quản trị viên mà bot đã thăng cấp
+❂ /admincache*:* buộc làm mới danh sách quản trị viên
+❂ /del*:* xóa tin nhắn bạn đã trả lời
+❂ /purge*:* xóa tất cả các tin nhắn giữa tin nhắn này và tin nhắn đã trả lời.
+❂ /purge <integer X>*:* xóa tin nhắn đã trả lời và X tin nhắn theo sau nó nếu đã trả lời một tin nhắn.
+❂ /setgtitle <text>*:* đặt tiêu đề nhóm
+❂ /setgpic*:* trả lời một hình ảnh để đặt làm ảnh nhóm
+❂ /setdesc*:* Đặt mô tả nhóm
+❂ /setsticker*:* Đặt hình dán nhóm
 
 *Rules*:
-❂ /rules*:* get the rules for this chat.
-❂ /setrules <your rules here>*:* set the rules for this chat.
-❂ /clearrules*:* clear the rules for this chat.
+❂ /rules*:* lấy các quy tắc cho cuộc trò chuyện này.
+❂ /setrules <quy tắc của bạn ở đây>*:* đặt ra các quy tắc cho cuộc trò chuyện này.
+❂ /clearrules*:* xóa các quy tắc cho cuộc trò chuyện này.
 """
 
 SET_DESC_HANDLER = CommandHandler("setdesc", set_desc, filters=Filters.chat_type.groups, run_async=True)

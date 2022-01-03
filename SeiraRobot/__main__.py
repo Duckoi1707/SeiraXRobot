@@ -360,32 +360,30 @@ def seira_about_callback(update, context):
     query = update.callback_query
     if query.data == "seira_":
         query.message.edit_text(
-            text="๏ I'm *Seira*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Seira's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for Seira Robot.",
+            text="๏ Tôi Là*OGGYVN*, một bot quản lý nhóm mạnh mẽ được xây dựng để giúp bạn quản lý nhóm của mình một cách dễ dàng."
+            "\n• Tôi có thể hạn chế người dùng."
+            "\n• Tôi có thể chào mừng người dùng bằng các tin nhắn chào mừng có thể tùy chỉnh và thậm chí thiết lập các quy tắc của nhóm."
+            "\n• Tôi có một hệ thống chống lũ lụt tiên tiến."
+            "\n• Tôi có thể cảnh báo người dùng cho đến khi họ đạt đến cảnh báo tối đa, với mỗi hành động được xác định trước như cấm, tắt tiếng, đá, v.v.."
+            "\n• Tôi có một hệ thống lưu giữ ghi chú, danh sách đen và thậm chí là các câu trả lời định trước cho một số từ khóa nhất định."
+            "\n• Tôi kiểm tra quyền của quản trị viên trước khi thực hiện bất kỳ lệnh nào và nhiều nội dung khác"
+            "\n\n_OGGYVN được cấp phép theo Giấy phép Công cộng GNU v3.0_"
+            "\n\n Nhấp vào nút bên dưới để nhận trợ giúp cơ bản cho Robot Seira.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="seira_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="seira_notes"),
+                    InlineKeyboardButton(text="Admin", callback_data="seira_admin"),
+                    InlineKeyboardButton(text="Ghi chú", callback_data="seira_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="seira_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="seira_credits"),
+                    InlineKeyboardButton(text="Hỗ Trợ", callback_data="seira_support"),
+                    InlineKeyboardButton(text="Tín Dụng", callback_data="seira_credits"),
+                 
                  ],
                  [
-                    InlineKeyboardButton(text="Seth Tamvan", url="https://t.me/xyzsethhh"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="seira_back"),
+                    InlineKeyboardButton(text="Quay Lại", callback_data="seira_back"),
                  ]
                 ]
             ),
@@ -407,14 +405,14 @@ def seira_about_callback(update, context):
 
     elif query.data == "seira_admin":
         query.message.edit_text(
-            text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Seira Robot now ready to manage your group."
-            "\n\n*Admin Tools*"
-            "\nBasic Admin tools help you to protect and powerup your group."
-            "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
-            "\n\n*Greetings*"
-            "\nLets set a welcome message to welcome new users coming to your group."
-            "\nsend `/setwelcome [message]` to set a welcome message!",
+            text=f"*๏ Hãy làm cho nhóm của bạn hiệu quả ngay bây giờ*"
+            "\nXin chúc mừng, OGGY Robot hiện đã sẵn sàng để quản lý nhóm của bạn."
+            "\n\n*Công cụ quản trị*"
+            "\nCác công cụ quản trị cơ bản giúp bạn bảo vệ và tăng cường sức mạnh cho nhóm của mình."
+            "\nBạn có thể cấm thành viên, Kick thành viên, Thăng cấp ai đó làm quản trị viên thông qua lệnh của bot."
+            "\n\n*Lời chào hỏi*"
+            "\nCho phép thiết lập một thông điệp chào mừng để chào mừng những người dùng mới đến với nhóm của bạn."
+            "\nsend `/setwelcome [message]` để thiết lập một thông điệp chào mừng!",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(

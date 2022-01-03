@@ -313,42 +313,42 @@ def weebify(update: Update, context: CallbackContext):
 
 
 __help__ = """
-❂ /runs*:* reply a random string from an array of replies
-❂ /slap*:* slap a user, or get slapped if not a reply
-❂ /shrug*:* get shrug XD
-❂ /table*:* get flip/unflip :v
-❂ /decide*:* Randomly answers yes/no/maybe
-❂ /toss*:* Tosses A coin
-❂ /bluetext*:* check urself :V
-❂ /roll*:* Roll a dice
-❂ /rlg*:* Join ears,nose,mouth and create an emo ;-;
-❂ /shout <keyword>*:* write anything you want to give loud shout
-❂ /weebify <text>*:* returns a weebified text
-❂ /sanitize*:* always use this before /pat or any contact
-❂ /pat*:* pats a user, or get patted
-❂ /8ball*:* predicts using 8ball method
+❂ /runs*:* trả lời một chuỗi ngẫu nhiên từ một loạt các câu trả lời
+❂ /slap*:* tát một người dùng hoặc bị tát nếu không phải là một câu trả lời
+❂ /shrug*:* nhún vai XD
+❂ /table*:* lật / lật :v
+❂ /decide*:* Câu trả lời ngẫu nhiên có / không / có thể
+❂ /toss*:* Tung đồng xu
+❂ /bluetext*:* kiểm tra bản thân :V
+❂ /roll*:* Lắc xúc xắc
+❂ /rlg*:* Ghép tai, mũi, miệng và tạo biểu tượng cảm xúc;-;
+❂ /shout <keyword>*:* viết bất cứ điều gì bạn muốn để hét to
+❂ /weebify <text>*:* trả về một văn bản được hóa nhỏ
+❂ /sanitize*:* luôn sử dụng điều này trước / vỗ nhẹ hoặc bất kỳ liên hệ nào
+❂ /pat*:* vỗ về người dùng hoặc được vỗ về
+❂ /8ball*:* dự đoán bằng phương pháp 8ball
 
 - Animation
-❂ /love *:* Animation For Love ❤️
-❂ /hack *:* Animation For Hacking
-❂ /moon *:* Animation For Moon 🌕
-❂ /block *:* Animation For Block 🟦
-❂ /bombs *:* Animation For Bomb 💣
-❂ /kill *:* Animation For Kill 🔪
+❂ /love *:* Hoạt hình cho tình yêu ❤️
+❂ /hack *:* Hoạt hình để lấy cắp dữ liệu
+❂ /moon *:* Hoạt hình cho mặt trăng 🌕
+❂ /block *:* Hoạt ảnh cho khối 🟦
+❂ /bombs *:* Hoạt ảnh bom nổ 💣
+❂ /kill *:* Hoạt hình để giết 🔪
 
-- Shippering
-❂ /couples - get couples of today
+- Lung linh
+❂ /couples - có được những cặp đôi của ngày hôm nay
 
-- Here is the help for the Styletext module:
+- Đây là trợ giúp cho mô-đun Styletext:
 
-❂ /weebify <text>: weebify your text!
-❂ /bubble <text>: bubble your text!
-❂ /fbubble <text>: bubble-filled your text!
-❂ /square <text>: square your text!
-❂ /fsquare <text>: square-filled your text!
-❂ /blue <text>: bluify your text!
-❂ /latin <text>: latinify your text!
-❂ /lined <text>: lined your text!
+❂ /weebify <text>: làm sáng tỏ văn bản của bạn!
+❂ /bubble <text>: bong bóng văn bản của bạn!
+❂ /fbubble <text>: đầy bong bóng văn bản của bạn!
+❂ /square <text>: vuông văn bản của bạn!
+❂ /fsquare <text>: điền vào ô vuông văn bản của bạn!
+❂ /blue <text>: làm mờ văn bản của bạn!
+❂ /latin <text>: điều chỉnh văn bản của bạn!
+❂ /lined <text>: lót văn bản của bạn!
 """
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)

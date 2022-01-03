@@ -81,41 +81,41 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/2a32358fbfb1776fefac0.jpg)
+*Xin Chào {} !*
+✪ Tôi là một bot quản lý của OGGYVN [✨](https://telegra.ph/file/ed27010abc3804bebbddd.jpg)
 ────────────────────────
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
+× *Thời Gian Hoạt Động:* `{}`
+× `{}` *Người Dùng, Sử Dụng* `{}` *Nhóm.*
 ────────────────────────
-✪ Hit /help to see my available commands.
+✪ Sử Dụng /help Để Biết Cách Chi Tiết Sử Dụng.
 """
 
 buttons = [
     [
-        InlineKeyboardButton(text="About Seira Robot", callback_data="seira_"),
+        InlineKeyboardButton(text="Thông Tin BOT OGGYVN", callback_data="seira_"),
     ],
     [
-        InlineKeyboardButton(text="Get Help", callback_data="help_back"),
+        InlineKeyboardButton(text="Hỗ Trợ Lệnh", callback_data="help_back"),
         InlineKeyboardButton(
-            text="Try inline!​​", switch_inline_query_current_chat=""
+            text="Nội Tuyến BOT​​", switch_inline_query_current_chat=""
         ),
     ],
     [
         InlineKeyboardButton(
-            text="➗ Add Seira To Your Group ➗", url="t.me/SeiraXRobot?startgroup=new"),
+            text="× Thêm BOT Vào Nhóm ×", url="t.me/oggyvipbot?startgroup=new"),
     ],
 ]
 
 
 HELP_STRINGS = """
-Click on the button bellow to get description about specifics command."""
+Nhấp vào nút bên dưới để xem mô tả về lệnh cụ thể."""
 
-EMI_IMG = "https://telegra.ph/file/2a32358fbfb1776fefac0.jpg"
+EMI_IMG = "https://telegra.ph/file/ed27010abc3804bebbddd.jpg"
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @xyzsethhh \
- Supporting isnt always financial! \
- Those who cannot provide monetary support are welcome to help us develop the bot at ."""
+DONATE_STRING = """Heya, rất vui khi biết bạn muốn quyên góp!
+ Bạn có thể ủng hộ dự án bằng cách liên hệ @oggyvn \
+ Hỗ trợ không phải lúc nào cũng tài chính! \
+ Những người không thể cung cấp hỗ trợ tiền tệ được hoan nghênh giúp chúng tôi phát triển bot tại nhóm ."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -441,11 +441,11 @@ def seira_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Support", url="t.me/SeiraSupport"),
-                    InlineKeyboardButton(text="Updates", url="https://t.me/sethproject"),
+                    InlineKeyboardButton(text="Hỗ Trợ", url="https://t.me/wallemusic"),
+                    InlineKeyboardButton(text="Cập Nhật", url="https://t.me/giaitrioggy"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="seira_"),
+                    InlineKeyboardButton(text="Quay Lại", callback_data="seira_"),
                  
                  ]
                 ]
@@ -455,21 +455,17 @@ def seira_about_callback(update, context):
 
     elif query.data == "seira_credits":
         query.message.edit_text(
-            text=f"๏ Credis for Seira\n"
-            "\nHere Developers Making And Give Inspiration For Made The Seira Robot",
+            text=f"๏ Tạo Bởi OGGYVN\n"
+            "\nTại đây các nhà phát triển đã tạo ra và tạo cảm hứng để tạo ra robot OGGYVN",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Seth", url="https://github.com/Dorimuhai"),
-                    InlineKeyboardButton(text="Sena-Ex", url="https://github.com/kennedy-ex"),
+                    InlineKeyboardButton(text="OGGYVN", url="https://t.me/oggyvn"),
+                    InlineKeyboardButton(text="Chưa Có", url="https://t.me/oggyvn"),
                  ],
                  [
-                    InlineKeyboardButton(text="Vain", url="https://github.com/shiinobu"),
-                    InlineKeyboardButton(text="All Dev's Bots", url="https://t.me/SeiraSupport"),
-                 ],
-                 [
-                    InlineKeyboardButton(text="Go Back", callback_data="seira_"),
+                    InlineKeyboardButton(text="Quay Lại", callback_data="seira_"),
                  ]
                 ]
             ),

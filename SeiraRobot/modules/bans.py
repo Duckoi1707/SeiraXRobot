@@ -572,23 +572,23 @@ def snipe(update: Update, context: CallbackContext):
 
 
 __help__ = """
-*User Commands:*
+*Lệnh người dùng:*
 
-❂ /kickme*:* kicks the user who issued the command
+❂ /kickme*:* đá người dùng đã ra lệnh
 
 *Admins only:*
 
-❂ /ban <userhandle>*:* bans a user. (via handle, or reply)
-❂ /sban <userhandle>*:* Silently ban a user. Deletes command, Replied message and doesn't reply. (via handle, or reply)
-❂ /tban <userhandle> x(m/h/d)*:* bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
-❂ /unban <userhandle>*:* unbans a user. (via handle, or reply)
-❂ /kick <userhandle>*:* kicks a user out of the group, (via handle, or reply)
-❂ /mute <userhandle>*:* silences a user. Can also be used as a reply, muting the replied to user.
-❂ /tmute <userhandle> x(m/h/d)*:* mutes a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
-❂ /unmute <userhandle>*:* unmutes a user. Can also be used as a reply, muting the replied to user.
-❂ /zombies*:* searches deleted accounts
-❂ /zombies clean*:* removes deleted accounts from the group.
-❂ /snipe <chatid> <string>*:* Make me send a message to a specific chat.
+❂ /ban <userhandle>*:* cấm người dùng. (gõ username hoặc trả lời)
+❂ /sban <userhandle>*:* Cấm âm thầm người dùng. Xóa lệnh, tin nhắn đã trả lời và không trả lời. (gõ username hoặc trả lời tin nhắn)
+❂ /tban <userhandle> x(m/h/d)*:* cấm người dùng trong x thời gian. (thông qua gõ username, hoặc trả lời tin nhắn). m = phút, h = giờ, d = ngày.
+❂ /unban <userhandle>*:* bỏ cấm người dùng. (thông qua gõ username hoặc trả lời tin nhắn)
+❂ /kick <userhandle>*:* loại người dùng ra khỏi nhóm, (thông qua gõ username hoặc trả lời tin nhắn)
+❂ /mute <userhandle>*:* người dùng im lặng. Cũng có thể được sử dụng làm câu trả lời, tắt tiếng người dùng đã trả lời.
+❂ /tmute <userhandle> x(m/h/d)*:* tắt tiếng người dùng trong x thời gian. (thông qua gõ username, hoặc trả lời tin nhắn). m = phút, h = giờ, d = ngày.
+❂ /unmute <userhandle>*:* bật tiếng người dùng. Cũng có thể được sử dụng làm câu trả lời, tắt tiếng người dùng đã trả lời.
+❂ /zombies*:* tìm kiếm các tài khoản đã xóa
+❂ /zombies clean*:* xóa các tài khoản đã xóa khỏi nhóm.
+❂ /snipe <chatid> <string>*:* Yêu cầu tôi gửi tin nhắn đến một cuộc trò chuyện cụ thể.
 """
 
 

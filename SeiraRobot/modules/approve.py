@@ -193,17 +193,17 @@ def unapproveall_btn(update: Update, context: CallbackContext):
 
 
 __help__ = """
-Sometimes, you might trust a user not to send unwanted content.
-Maybe not enough to make them admin, but you might be ok with locks, blacklists, and antiflood not applying to them.
+Đôi khi, bạn có thể tin tưởng người dùng không gửi nội dung không mong muốn.
+Có thể không đủ để khiến họ trở thành quản trị viên, nhưng bạn có thể ổn khi ổ khóa, danh sách đen và antiflood không áp dụng cho họ.
 
-That's what approvals are for - approve of trustworthy users to allow them to send
+Đó là những gì để phê duyệt - phê duyệt những người dùng đáng tin cậy để cho phép họ gửi
 
-*Admin commands:*
-❂ /approval*:* Check a user's approval status in this chat.
-❂ /approve*:* Approve of a user. Locks, blacklists, and antiflood won't apply to them anymore.
-❂ /unapprove*:* Unapprove of a user. They will now be subject to locks, blacklists, and antiflood again.
-❂ /approved*:* List all approved users.
-❂ /unapproveall*:* Unapprove *ALL* users in a chat. This cannot be undone.
+*Lệnh quản trị:*
+❂ /approval*:* Kiểm tra trạng thái phê duyệt của người dùng trong cuộc trò chuyện này.
+❂ /approve*:* Phê duyệt của một người dùng. Khóa, danh sách đen và chống lũ lụt sẽ không áp dụng cho chúng nữa.
+❂ /unapprove*:* Không phê duyệt người dùng. Bây giờ chúng sẽ lại bị khóa, danh sách đen và chống lũ lụt.
+❂ /approved*:* Liệt kê tất cả người dùng được phê duyệt.
+❂ /unapproveall*:* Không được phê duyệt *ALL* người dùng trong một cuộc trò chuyện. Điều này không thể được hoàn tác.
 """
 
 APPROVE = DisableAbleCommandHandler("approve", approve, run_async=True)

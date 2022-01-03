@@ -15,7 +15,7 @@ TRUTH = (
      "Bạn đã bao giờ ngoáy mũi và ăn nó chưa?",
      "Lần cuối cùng bạn nói dối bố mẹ là khi nào và tại sao?",
      "Bạn đã bao giờ nói dối về tuổi của mình để tham gia một cuộc thi chưa?",
-     “Bạn đã bao giờ bị bắt gặp đang kiểm tra ai đó chưa?
+     “Bạn đã bao giờ bị bắt gặp đang kiểm tra ai đó chưa?"
 )
 
 DARE = (

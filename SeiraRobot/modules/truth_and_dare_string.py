@@ -1,5 +1,5 @@
 TRUTH = (
-    ""Bạn đã từng mê ai đó chưa?"
+    "Bạn đã từng mê ai đó chưa?"
      "Bạn đã bao giờ đi ngang qua bố mẹ mình làm 'chuyện ấy' chưa?",
      "Ai là người cuối cùng bạn thích nhất? Tại sao?",
      "Bạn đã bao giờ bị đình chỉ học chưa?",

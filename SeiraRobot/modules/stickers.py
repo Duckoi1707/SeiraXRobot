@@ -81,7 +81,7 @@ def kang(update, context):
         elif msg.reply_to_message.document:
             file_id = msg.reply_to_message.document.file_id
         else:
-            msg.reply_text("Yea, I can't kang that.")
+            msg.reply_text("Vâng, tôi không thể làm sticker điều đó.")
 
         kang_file = context.bot.get_file(file_id)
         if not is_animated:
@@ -129,14 +129,14 @@ def kang(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="View Pack", url=f"t.me/addstickers/{packname}"
+                                text="Lưu Trữ", url=f"t.me/addstickers/{packname}"
                             )
                         ]
                     ]
                 )
                 msg.reply_text(
-                    f"<b>Your sticker has been added!</b>"
-                    f"\nEmoji Is : {sticker_emoji}",
+                    f"<b>Hình dán của bạn đã được thêm!</b>"
+                    f"\nBiểu tượng cảm xúc là : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -171,27 +171,27 @@ def kang(update, context):
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="View Pack", url=f"t.me/addstickers/{packname}"
+                                    text="Lưu Trữ", url=f"t.me/addstickers/{packname}"
                                 )
                             ]
                         ]
                     )
                     msg.reply_text(
-                        f"<b>Your sticker has been added!</b>"
+                        f"<b>Hình dán của bạn đã được thêm vào!</b>"
                         f"\nEmoji Is : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
                     )
-                elif e.message == "Invalid sticker emojis":
-                    msg.reply_text("Invalid emoji(s).")
+                elif e.message == "Biểu tượng cảm xúc hình dán không hợp lệ":
+                    msg.reply_text("Biểu tượng cảm xúc không hợp lệ(s).")
                 elif e.message == "Stickers_too_much":
-                    msg.reply_text("Max packsize reached. Press F to pay respecc.")
-                elif e.message == "Internal Server Error: sticker set not found (500)":
+                    msg.reply_text("Đã đạt đến kích thước gói tối đa. Nhấn F để trả ứng.")
+                elif e.message == "Lỗi máy chủ nội bộ: không tìm thấy bộ hình dán (500)":
                     edited_keyboard = InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="View Pack", url=f"t.me/addstickers/{packname}"
+                                    text="Lưu Trữ", url=f"t.me/addstickers/{packname}"
                                 )
                             ]
                         ]
@@ -237,14 +237,14 @@ def kang(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="View Pack", url=f"t.me/addstickers/{packname}"
+                                text="Lưu Trữ", url=f"t.me/addstickers/{packname}"
                             )
                         ]
                     ]
                 )
                 msg.reply_text(
-                    f"<b>Your sticker has been added!</b>"
-                    f"\nEmoji Is : {sticker_emoji}",
+                    f"<b>Hình dán của bạn đã được thêm vào!</b>"
+                    f"\nBiểu tượng cảm xúc là : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -261,20 +261,20 @@ def kang(update, context):
                         tgs_sticker=open("kangsticker.tgs", "rb"),
                     )
                     
-                elif e.message == "Invalid sticker emojis":
+                elif e.message == "Biểu tượng cảm xúc hình dán không hợp lệ":
                     msg.reply_text("Invalid emoji(s).")
-                elif e.message == "Internal Server Error: sticker set not found (500)":
+                elif e.message == "Lỗi máy chủ nội bộ: không tìm thấy bộ hình dán (500)":
                     edited_keyboard = InlineKeyboardMarkup(
                         [
                             [
                                 InlineKeyboardButton(
-                                    text="View Pack", url=f"t.me/addstickers/{packname}"
+                                    text="Lưu Trữ", url=f"t.me/addstickers/{packname}"
                                 )
                             ]
                         ]
                     )
                     msg.reply_text(
-                        f"<b>Your sticker has been added!</b>"
+                        f"<b>Hình dán của bạn đã được thêm!</b>"
                         f"\nEmoji Is : {sticker_emoji}",
                         reply_markup=edited_keyboard,
                         parse_mode=ParseMode.HTML,
@@ -321,18 +321,18 @@ def kang(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="View Pack", url=f"t.me/addstickers/{packname}"
+                            text="Lưu Trữ", url=f"t.me/addstickers/{packname}"
                         )
                     ]
                 ]
             )
             msg.reply_text(
-                f"<b>Your sticker has been added!</b>" f"\nEmoji Is : {sticker_emoji}",
+                f"<b>Hình dán của bạn đã được thêm vào!</b>" f"\nBiểu tượng cảm xúc là : {sticker_emoji}",
                 reply_markup=edited_keyboard,
                 parse_mode=ParseMode.HTML,
             )
         except OSError as e:
-            msg.reply_text("I can only kang images m8.")
+            msg.reply_text("Tôi chỉ có thể hình ảnh sticker m8.")
             print(e)
             return
         except TelegramError as e:
@@ -360,14 +360,14 @@ def kang(update, context):
                     [
                         [
                             InlineKeyboardButton(
-                                text="View Pack", url=f"t.me/addstickers/{packname}"
+                                text="Lưu Trữ", url=f"t.me/addstickers/{packname}"
                             )
                         ]
                     ]
                 )
                 msg.reply_text(
-                    f"<b>Your sticker has been added!</b>"
-                    f"\nEmoji Is : {sticker_emoji}",
+                    f"<b>Hình dán của bạn đã được thêm!</b>"
+                    f"\nBiểu tượng cảm xúc là : {sticker_emoji}",
                     reply_markup=edited_keyboard,
                     parse_mode=ParseMode.HTML,
                 )
@@ -384,7 +384,7 @@ def kang(update, context):
                 )
             print(e)
     else:
-        packs_text = "*Please reply to a sticker, or image to kang it!*\n"
+        packs_text = "*Vui lòng trả lời nhãn dán hoặc hình ảnh để làm sticker nó!*\n"
         if packnum > 0:
             firstpackname = "a" + str(user.id) + "_by_" + context.bot.username
             for i in range(0, packnum + 1):
@@ -396,7 +396,7 @@ def kang(update, context):
             packs = f"t.me/addstickers/{packname}"
 
         edited_keyboard = InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="View Pack", url=f"{packs}")]]
+            [[InlineKeyboardButton(text="Lưu Trữ", url=f"{packs}")]]
         )
         msg.reply_text(
             packs_text, reply_markup=edited_keyboard, parse_mode=ParseMode.MARKDOWN
@@ -452,22 +452,22 @@ def makepack_internal(
 
     except TelegramError as e:
         print(e)
-        if e.message == "Sticker set name is already occupied":
+        if e.message == "Tên tập hợp nhãn dán đã được sử dụng":
             msg.reply_text(
-                "<b>Your Sticker Pack is already created!</b>"
-                "\n\nYou can now reply to images, stickers and animated sticker with /steal to add them to your pack"
-                "\n\n<b>Send /stickers to find any sticker pack.</b>",
+                "<b> Gói Hình dán của bạn đã được tạo!</b>"
+                "\n\nGiờ đây, bạn có thể trả lời hình ảnh, hình dán và hình dán động bằng /steal để thêm chúng vào gói của bạn"
+                "\n\n<b>Gửi / nhãn dán để tìm bất kỳ gói nhãn dán nào.</b>",
                 reply_markup=keyboard,
                 parse_mode=ParseMode.HTML,
             )
-        elif e.message == "Peer_id_invalid" or "bot was blocked by the user":
+        elif e.message == "Peer_id_invalid" or "bot đã bị người dùng chặn":
             msg.reply_text(
-                f"{context.bot.first_name} was blocked by you.",
+                f"{context.bot.first_name} đã bị bạn chặn.",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="Unblock", url=f"t.me/{context.bot.username}"
+                                text="Mở Khoá", url=f"t.me/{context.bot.username}"
                             )
                         ]
                     ]
@@ -475,9 +475,9 @@ def makepack_internal(
             )
         elif e.message == "Internal Server Error: created sticker set not found (500)":
             msg.reply_text(
-                "<b>Your Sticker Pack has been created!</b>"
-                "\n\nYou can now reply to images, stickers and animated sticker with /steal to add them to your pack"
-                "\n\n<b>Send /stickers to find sticker pack.</b>",
+                "<b>Gói hình dán của bạn đã được tạo!</b>"
+                "\n\nGiờ đây, bạn có thể trả lời hình ảnh, hình dán và hình dán động bằng /steal để thêm chúng vào gói của bạn"
+                "\n\n<b>Gửi /stickers để tìm gói hình dán.</b>",
                 reply_markup=keyboard,
                 parse_mode=ParseMode.HTML,
             )
@@ -492,7 +492,7 @@ def makepack_internal(
             parse_mode=ParseMode.HTML,
         )
     else:
-        msg.reply_text("Failed to create sticker pack. Possibly due to blek mejik.")
+        msg.reply_text("Không tạo được gói hình dán. Có thể do blek mejik.")
 
 
 def getsticker(update, context):
@@ -501,9 +501,9 @@ def getsticker(update, context):
     if msg.reply_to_message and msg.reply_to_message.sticker:
         context.bot.sendChatAction(chat_id, "typing")
         update.effective_message.reply_text(
-            "Hello"
+            "xin chào"
             + f"{mention_html(msg.from_user.id, msg.from_user.first_name)}"
-            + ", Please check the file you requested below."
+            + ", Vui lòng kiểm tra tệp bạn yêu cầu bên dưới."
             "\nPlease use this feature wisely!",
             parse_mode=ParseMode.HTML,
         )
@@ -529,7 +529,7 @@ def cb_sticker(update: Update, context: CallbackContext):
     msg = update.effective_message
     split = msg.text.split(" ", 1)
     if len(split) == 1:
-        msg.reply_text("Provide some name to search for pack.")
+        msg.reply_text("Cung cấp một số tên để tìm kiếm gói.")
         return
 
     scraper = cloudscraper.create_scraper()
@@ -577,22 +577,22 @@ def delsticker(update, context):
 __mod_name__ = "Stickers"
 
 __help__ = """
-*Help menu for stickers tools*
+*Menu trợ giúp cho các công cụ hình dán*
 
-❂ /stickerid*:* reply to a sticker to me to tell you its file ID.
-❂ /getsticker*:* reply to a sticker to me to upload its raw PNG file.
-❂ /kang*:* reply to a sticker to add it to your pack.
-❂ /delsticker*:* Reply to your anime exist sticker to your pack to delete it.
-❂ /stickers*:* Find stickers for given term on combot sticker catalogue
-❂ /tiny*:* To make small sticker
-❂ /kamuii <1-8> *:* To deepefying stiker
-❂ /mmf <reply with text>*:* To draw a text for sticker or pohots
+❂ /stickerid*:* Trả lời nhãn dán để tôi cho bạn biết ID tệp của nó.
+❂ /getsticker*:* Trả lời một nhãn dán cho tôi để tải lên tệp PNG thô của nó.
+❂ /lamsticker*:* Reply vào một nhãn dán để thêm nó vào gói của bạn.
+❂ /delsticker*:* Trả lời hình dán tồn tại anime của bạn vào gói của bạn để xóa nó.
+❂ /stickers*:* Tìm nhãn dán cho thuật ngữ nhất định trên danh mục nhãn dán combot
+❂ /tiny*:* Để tạo nhãn dán nhỏ
+❂ /kamuii <1-8> *:* Để làm sâu sắc thêm stiker
+❂ /mmf <reply with text>*:* Để vẽ văn bản cho nhãn dán hoặc ảnh chụp
 """
 
 
 STICKERID_HANDLER = DisableAbleCommandHandler("stickerid", stickerid, run_async=True)
 GETSTICKER_HANDLER = DisableAbleCommandHandler("getsticker", getsticker, run_async=True)
-KANG_HANDLER = DisableAbleCommandHandler("kang", kang, pass_args=True, run_async=True)
+KANG_HANDLER = DisableAbleCommandHandler("lamsticker", kang, pass_args=True, run_async=True)
 DEL_HANDLER = DisableAbleCommandHandler("delsticker", delsticker, run_async=True)
 STICKERS_HANDLER = DisableAbleCommandHandler("stickers", cb_sticker, run_async=True)
 

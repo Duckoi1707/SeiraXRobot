@@ -80,36 +80,36 @@ async def photo(client: pbot, message: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(text="💡 BRIGHT", callback_data="bright"),
-                        InlineKeyboardButton(text="🖼 MIXED", callback_data="mix"),
+                        InlineKeyboardButton(text="💡 SÁNG CHÓI", callback_data="bright"),
+                        InlineKeyboardButton(text="🖼 TRỘN", callback_data="mix"),
                         InlineKeyboardButton(text="🔳 B&W", callback_data="b|w"),
                     ],
                     [
-                        InlineKeyboardButton(text="🟡 CIRCLE", callback_data="circle"),
-                        InlineKeyboardButton(text="🩸 BLUR", callback_data="blur"),
-                        InlineKeyboardButton(text="🌌 BORDER", callback_data="border"),
+                        InlineKeyboardButton(text="🟡 KHOANH TRÒN", callback_data="circle"),
+                        InlineKeyboardButton(text="🩸 MƠ HỒ", callback_data="blur"),
+                        InlineKeyboardButton(text="🌌 RANH GIỚI", callback_data="border"),
                     ],
                     [
                         InlineKeyboardButton(text="🎉 STICKER", callback_data="stick"),
-                        InlineKeyboardButton(text="↩️ ROTATE", callback_data="rotate"),
+                        InlineKeyboardButton(text="↩️ QUAY", callback_data="rotate"),
                         InlineKeyboardButton(
                             text="🔦 CONTRAST", callback_data="contrast"
                         ),
                     ],
                     [
                         InlineKeyboardButton(text="🌇 SEPIA", callback_data="sepia"),
-                        InlineKeyboardButton(text="✏️ PENCIL", callback_data="pencil"),
-                        InlineKeyboardButton(text="🐶 CARTOON", callback_data="cartoon"),
+                        InlineKeyboardButton(text="✏️ VẼ ẢNH", callback_data="pencil"),
+                        InlineKeyboardButton(text="🐶 PHIM HOẠT HÌNH", callback_data="cartoon"),
                     ],
                     [
                         InlineKeyboardButton(text="🔄 INVERT", callback_data="inverted"),
                         InlineKeyboardButton(text="🔮 GLITCH", callback_data="glitch"),
                         InlineKeyboardButton(
-                            text="✂️ REMOVE BG", callback_data="removebg"
+                            text="✂️ BỎ BG", callback_data="removebg"
                         ),
                     ],
                     [
-                        InlineKeyboardButton(text="❌ CLOSE", callback_data="close_e"),
+                        InlineKeyboardButton(text="❌ QUAY LẠI", callback_data="close_e"),
                     ],
                 ]
             ),
@@ -121,7 +121,7 @@ async def photo(client: pbot, message: Message):
             return
         else:
             try:
-                await message.reply_text("Something went wrong!", quote=True)
+                await message.reply_text("Đã xảy ra sự cố!", quote=True)
             except Exception:
                 return
 
@@ -137,10 +137,10 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                     [
                         [
                             InlineKeyboardButton(
-                                text="WITH WHITE BG", callback_data="rmbgwhite"
+                                text="VỚI BG TRẮNG", callback_data="rmbgwhite"
                             ),
                             InlineKeyboardButton(
-                                text="WITHOUT BG", callback_data="rmbgplain"
+                                text="KHÔNG CÓ BG", callback_data="rmbgplain"
                             ),
                         ],
                         [
@@ -157,14 +157,14 @@ async def cb_handler(client: pbot, query: CallbackQuery):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text="Normal", callback_data="stkr"),
+                            InlineKeyboardButton(text="Bình thường", callback_data="stkr"),
                             InlineKeyboardButton(
-                                text="Edge Curved", callback_data="cur_ved"
+                                text="Cạnh cong", callback_data="cur_ved"
                             ),
                         ],
                         [
                             InlineKeyboardButton(
-                                text="Circle", callback_data="circle_sticker"
+                                text="Khoanh tròn", callback_data="circle_sticker"
                             )
                         ],
                     ]
@@ -186,12 +186,12 @@ async def cb_handler(client: pbot, query: CallbackQuery):
 
         elif query.data == "glitch":
             await query.message.edit_text(
-                "**Select required mode**ㅤㅤㅤㅤ",
+                "**Chọn chế độ bắt buộc**ㅤㅤㅤㅤ",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                text="NORMAL", callback_data="normalglitch"
+                                text="THÔNG THƯỜNG", callback_data="normalglitch"
                             ),
                             InlineKeyboardButton(
                                 text="SCAN LINES", callback_data="scanlineglitch"
@@ -202,7 +202,7 @@ async def cb_handler(client: pbot, query: CallbackQuery):
             )
         elif query.data == "normalglitch":
             await query.message.edit_text(
-                "**Select Glitch power level**",
+                "**Chọn mức công suất trục trặc**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -229,7 +229,7 @@ async def cb_handler(client: pbot, query: CallbackQuery):
             )
         elif query.data == "scanlineglitch":
             await query.message.edit_text(
-                "**Select Glitch power level**",
+                "**Chọn mức công suất trục trặc**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -256,7 +256,7 @@ async def cb_handler(client: pbot, query: CallbackQuery):
             )
         elif query.data == "blur":
             await query.message.edit(
-                "**Select a Type**",
+                "**Chọn một loại**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -269,7 +269,7 @@ async def cb_handler(client: pbot, query: CallbackQuery):
             )
         elif query.data == "circle":
             await query.message.edit_text(
-                "**Select required mode**",
+                "**Chọn chế độ bắt buộc**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -285,7 +285,7 @@ async def cb_handler(client: pbot, query: CallbackQuery):
             )
         elif query.data == "border":
             await query.message.edit(
-                "**Select Border**",
+                "**Chọn đường viền**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [

@@ -2,16 +2,16 @@ import random
 from SeiraRobot.events import register
 from SeiraRobot.events import telethn
 
-APAKAH_STRING = ["Haha Mimpi !", 
-                 "Tidak Mungkin Besti😅", 
-                 "Semoga yaa,pasti terwujud aamiin✨", 
-                 "Heleh...Ngimpi !",
-                 "YUK BISA YUK , SEMANGAT 💜",
+APAKAH_STRING = ["Haha Chào !", 
+                 "Bestie không thể", 
+                 "Tôi hy vọng nó sẽ trở thành sự thật, amen✨", 
+                 "Heleh ... Đang mơ !",
+                 "Nào, đi nào, THẦN 💜",
                  "NGGA MUNGKIN..HAHAHA",
-                 "Ya Nda Tau Kok Tanya Seira",
-                 "Pala bapak kau Kempes Xixixixi",
-                 "Mungkin..",
-                 "Coba Tanya Admin 🤭"
+                 "Vâng, bạn không biết, tại sao lại hỏi OGGY",
+                 "Nhục đậu khấu của bố bạn là phẳng Xixixixi",
+                 "Khả thin..",
+                 "Thử hỏi quản trị viên🤭"
                 ]
 
 

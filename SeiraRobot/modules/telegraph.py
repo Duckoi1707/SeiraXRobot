@@ -11,7 +11,7 @@ from PIL import Image
 from datetime import datetime
 from telegraph import Telegraph, upload_file, exceptions
 
-wibu = "SeiraRobot"
+wibu = "OGGYVN"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=wibu)
 auth_url = r["auth_url"]
@@ -76,7 +76,7 @@ async def _(event):
             ms = (end - start).seconds
             await event.reply("Pasted to https://telegra.ph/{}".format(response["path"], ms), link_preview=True)
     else:
-        await event.reply("Reply to a message to get a permanent telegra.ph link.")
+        await event.reply("Trả lời tin nhắn để nhận liên kết telegraph.ph vĩnh viễn.")
 
 
 def resize_image(image):

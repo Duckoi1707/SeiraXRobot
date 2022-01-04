@@ -7,12 +7,12 @@ from pyrogram import __version__ as pyrover
 from SeiraRobot.events import register as MEMEK
 from SeiraRobot import telethn as tbot
 
-PHOTO = "https://telegra.ph/file/51c4e8b6b40cd0cb66cea.jpg"
+PHOTO = "https://telegra.ph/file/055163eb211f17c6dd6db.jpg"
 
-@MEMEK(pattern=("/mhelp"))
+@MEMEK(pattern=("/vipnoproohsw2"))
 async def awake(event):
   tai = event.sender.first_name
-  LUNA = "** ──「 Perintah Dasar 」── ** \n\n"
+  LUNA = "** ──「 Lệnh Người Dùng 」── ** \n\n"
   LUNA += "• /play **(nama lagu / balas ke audio) — play musik via YouTube** \n"
   LUNA += "• /vplay ** (nama lagu / balas ke audio) – play video stream via YouTube** \n"
   LUNA += "• /playlist - **Untuk memutar playlist Anda atau playlist group anda** \n"

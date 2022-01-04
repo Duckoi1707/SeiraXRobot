@@ -3,7 +3,7 @@ import os
 from SeiraRobot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.xogame(?: |$)(.*)")
+@register(pattern="^/xogame (.*)")
 async def _(event):
     if event.fwd_from:
         return

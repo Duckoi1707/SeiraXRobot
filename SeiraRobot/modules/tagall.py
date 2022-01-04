@@ -9,7 +9,7 @@ from SeiraRobot.events import register as tomori
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "Hi Kawan Aku Seira Nimbrung you"
+    mentions = "Xin chào các bạn, tôi là OGGY VN còn bạn"
     chat = await event.get_input_chat()
     async for x in telethn.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"

@@ -44,10 +44,10 @@ def mediainfo(media):
 
 @register(pattern="^/logo ?(.*)")
 async def logo_gen(event):
-    xx = await event.reply("`Preparing your logo...`")
+    xx = await event.reply("`Chuẩn bị logo của bạn...`")
     name = event.pattern_match.group(1)
     if not name:
-        await xx.edit("`Provide some text to draw!\nExample: /logo <your name>!`")
+        await xx.edit("`Cung cấp một số văn bản để vẽ!\nThí dụ: /logo <tên của bạn>!`")
         return
     bg_, font_ = "", ""
     if event.reply_to_msg_id:
@@ -113,7 +113,7 @@ async def logo_gen(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Seira Robot](https://t.me/SeiraXRobot)",
+            caption="Thực Hiện Bởi [OGGY LÀ TRAI ZIN](https://t.me/OGGYVN)",
             force_document=False,
         )
         os.remove(flnme)
@@ -127,10 +127,10 @@ async def logo_gen(event):
 
 @register(pattern="^/wlogo ?(.*)")
 async def logo_(event):
-    xx = await event.reply("`Preparing your logo...`")
+    xx = await event.reply("`Chuẩn bị logo của bạn...`")
     name = event.pattern_match.group(1)
     if not name:
-        await xx.edit("`Provide some text to draw!\nExample: /wlogo <your name>!`")
+        await xx.edit("`Cung cấp một số văn bản để vẽ!\nc:Thí dụ /wlogo <tên của bạn>!`")
         return
     bg_, font_ = "", ""
     if event.reply_to_msg_id:
@@ -196,7 +196,7 @@ async def logo_(event):
         await tbot.send_file(
             event.chat_id,
             file=flnme,
-            caption="Logo by [Seira Robot](https://t.me/SeiraXRobot)",
+            caption="Thực hiện bởi [OGGY LÀ TRAI ZIN](https://t.me/oggyvn)",
             force_document=False,
         )
         os.remove(flnme)
@@ -208,14 +208,14 @@ async def logo_(event):
             os.remove(font_)
 
 
-__mod_name__ = "Logomaker"
+__mod_name__ = "Tạo Logo"
 
-__help__ = """ This is help menu for logomaker
+__help__ = """ Đây là menu trợ giúp cho người đăng nhập
 
-❂ /logo <text/name> - Create a logo with random view.
-❂ /wlogo <text/name> - Create a logo with wide view only.
+❂ /logo <text/name> - Tạo một logo với chế độ xem ngẫu nhiên.
+❂ /wlogo <text/name> - Tạo một biểu trưng chỉ có tầm nhìn rộng.
 
  Image Editor :
 
-❂  /edit <reply photo> - to edit image.
+❂  /edit <reply photo> - để chỉnh sửa hình ảnh.
 """

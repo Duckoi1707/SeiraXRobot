@@ -16,8 +16,8 @@ client = MongoClient()
 client = MongoClient(MONGO_DB_URI, MONGO_PORT)[MONGO_DB]
 motor = motor_asyncio.AsyncIOMotorClient(MONGO_DB_URI, MONGO_PORT)
 db = motor[MONGO_DB]
-db = client["SethBot"]
+db = client["OGGY"]
 try:
     asyncio.get_event_loop().run_until_complete(motor.server_info())
 except ServerSelectionTimeoutError:
-    sys.exit(log.critical("Can't connect to mongodb! Exiting..."))
+    sys.exit(log.critical("Không thể kết nối với mongodb! Lối ra..."))

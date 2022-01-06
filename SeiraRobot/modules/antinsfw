@@ -96,7 +96,7 @@ __Use `/antinsfw off` to disable this.__
     )
 
 
-@pbot.on_message(filters.command("nsfwscan"))
+@pbot.on_message(filters.command("thunghiem1"))
 @capture_err
 async def nsfw_scan_command(_, message):
     if not message.reply_to_message:

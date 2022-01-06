@@ -91,7 +91,7 @@ async def detect_nsfw(_, message):
 **Hentai:** `{results.hentai} %`
 **Bản vẽ:** `{results.drawings} %`
 **————————————————————————**
-__Sử dụng `/antinsfw off` để vô hiệu hóa điều này.__
+__Hệ Thống Đã Tự Xoá Hãy Văn Minh Hoặc Bạn Sẽ Bị Cấm.__
 """
     )
 

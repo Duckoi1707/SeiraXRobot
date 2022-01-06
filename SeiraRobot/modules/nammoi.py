@@ -11,7 +11,6 @@ from telethon import events, version
 from SeiraRobot.events import register
 from SeiraRobot import telethn as aasf
 from SeiraRobot import StartTime, dispatcher
-from SeiraRobot.tl.types import ChannelParticipantsAdmins
 
 edit_time = 5
 """ =======================2022====================== """

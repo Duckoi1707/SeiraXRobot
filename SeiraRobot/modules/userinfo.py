@@ -497,7 +497,7 @@ def set_about_bio(update: Update, context: CallbackContext):
                     )
                 )
     else:
-        message.reply_text("Reply to someone to set their bio!")
+        message.reply_text("Trả lời ai đó để thiết lập tiểu sử của họ!")
 
 
 def __user_info__(user_id):

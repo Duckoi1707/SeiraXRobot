@@ -82,7 +82,7 @@ async def detect_nsfw(_, message):
         return
     await message.reply_text(
         f"""
-**NSFW Image Detected & Deleted Successfully!
+**Đã phát hiện và xóa hình ảnh NSFW thành công!
 ————————————————————————**
 **User:** {message.from_user.mention} [`{message.from_user.id}`]
 **Safe:** `{results.neutral} %`
@@ -101,7 +101,7 @@ __Use `/antinsfw off` to disable this.__
 async def nsfw_scan_command(_, message):
     if not message.reply_to_message:
         await message.reply_text(
-            "`Reply to an image/document/sticker/animation to scan it.`"
+            "`Trả lời hình ảnh / tài liệu / nhãn dán / hoạt ảnh để quét nó.`"
         )
         return
     reply = message.reply_to_message
@@ -141,7 +141,7 @@ async def nsfw_scan_command(_, message):
     )
 
 
-@pbot.on_message(filters.command("antinsfw") & ~filters.private)
+@pbot.on_message(filters.command("thunghiembot") & ~filters.private)
 @adminsOnly("can_change_info")
 async def nsfw_enable_disable(_, message):
     if len(message.command) != 2:
@@ -155,12 +155,12 @@ async def nsfw_enable_disable(_, message):
     if status == "on":
         nsfw_on(chat_id)
         await message.reply_text(
-            "Enabled AntiNSFW System. I will Delete Messages Containing Inappropriate Content."
+            "Đã bật Hệ thống AntiNSFW. Tôi sẽ xóa các tin nhắn chứa nội dung không phù hợp."
         )
     elif status == "off":
         nsfw_off(chat_id)
-        await message.reply_text("Disabled AntiNSFW System.")
+        await message.reply_text("Hệ thống AntiNSFW bị vô hiệu hóa.")
     else:
         await message.reply_text(
-            "`Unknown Suffix, Use /antinsfw [enable|disable]`"
+            "`Hậu tố không xác định, Sử dụng /antinsfw [enable|disable]`"
         )

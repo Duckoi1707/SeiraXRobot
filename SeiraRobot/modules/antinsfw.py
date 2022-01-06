@@ -141,7 +141,7 @@ async def nsfw_scan_command(_, message):
     )
 
 
-@pbot.on_message(filters.command("antinwfs") & ~filters.private)
+@pbot.on_message(filters.command("camkhieudam") & ~filters.private)
 async def nsfw_enable_disable(_, message):
     if len(message.command) != 2:
         await message.reply_text(

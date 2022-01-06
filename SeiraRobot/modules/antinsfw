@@ -84,19 +84,19 @@ async def detect_nsfw(_, message):
         f"""
 **Đã phát hiện và xóa hình ảnh NSFW thành công!
 ————————————————————————**
-**User:** {message.from_user.mention} [`{message.from_user.id}`]
-**Safe:** `{results.neutral} %`
-**Porn:** `{results.porn} %`
-**Adult:** `{results.sexy} %`
+**Người dùng:** {message.from_user.mention} [`{message.from_user.id}`]
+**An Toàn:** `{results.neutral} %`
+**Khiêu Dâm:** `{results.porn} %`
+**Người Lớn:** `{results.sexy} %`
 **Hentai:** `{results.hentai} %`
-**Drawings:** `{results.drawings} %`
+**Bản vẽ:** `{results.drawings} %`
 **————————————————————————**
-__Use `/antinsfw off` to disable this.__
+__Sử dụng `/antinsfw off` để vô hiệu hóa điều này.__
 """
     )
 
 
-@pbot.on_message(filters.command("thunghiem1"))
+@pbot.on_message(filters.command("quetanh"))
 @capture_err
 async def nsfw_scan_command(_, message):
     if not message.reply_to_message:
@@ -131,11 +131,11 @@ async def nsfw_scan_command(_, message):
     results = results.result
     await m.edit(
         f"""
-**Neutral:** `{results.neutral} %`
-**Porn:** `{results.porn} %`
-**Hentai:** `{results.hentai} %`
-**Sexy:** `{results.sexy} %`
-**Drawings:** `{results.drawings} %`
+**Trung Lập:** `{results.neutral} %`
+**Khiêu Dâm:** `{results.porn} %`
+**HenTai:** `{results.hentai} %`
+**Người Lớn:** `{results.sexy} %`
+**Bản vẽ:** `{results.drawings} %`
 **NSFW:** `{results.is_nsfw}`
 """
     )

@@ -1,5 +1,4 @@
-from 
-SeiraRobot import db
+from SeiraRobot import db
 from typing import Dict, List, Union
 
 onoffdb = db.onoffper
